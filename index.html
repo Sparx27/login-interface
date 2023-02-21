@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <!-- FONT AWESOME -->
+  <script src="https://kit.fontawesome.com/3ad766ec21.js" crossorigin="anonymous"></script>
+  <title>Sparx login interface</title>
+</head>
+
+<body>
+
+  <div class="log-container">
+    <div class="container">
+      <h1>Login Interface</h1>
+      <input type="radio" name="tab" id="login" checked>
+      <input type="radio" name="tab" id="register">
+      <input type="radio" name="tab" id="reset">
+
+      <div class="log-header">
+          <label for="login" class="login">
+            <i class="fa-solid fa-right-to-bracket"></i>Login
+          </label>
+          <label for="register" class="register">
+            <i class="fa-solid fa-circle-user"></i>Register
+          </label>
+          <label for="reset" class="reset">
+            <i class="fa-solid fa-share-from-square"></i>Reset
+          </label>
+          <div class="slide"></div>
+      </div>
+
+      <!-- INTERFACE SECTIONS -->
+      <section class="content login-content">
+        <i class="fa-solid fa-user-tie"></i>
+        <div class="title">
+          <h2>Sign In</h2>
+        </div>
+
+        <form action="" class="form">
+          <label for="username">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="username" name="username" placeholder="Username" pattern="^[a-zA-Z0-9]{5,18}$" title="Must contain at least 5 alphanumeric characters" required>
+          </label>
+          <label for="password">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Password" pattern="^[^.\s]{6,}" title="Must contain at least 6 characters" required>
+          </label>
+          <div class="logged">
+            <input type="checkbox" name="logged" id="checkbox">
+            <label for="checkbox">Stay logged in</label>
+          </div>
+          <button>Login</button>
+        </form>
+      </section>
+
+      <section class="content register-content">
+        <i class="fa-solid fa-users"></i>
+        <div class="title">
+          <h2>Sign Up</h2>
+        </div>
+
+        <form action="" class="form">
+          <label for="username">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="username" name="username" placeholder="Username" pattern="^[a-zA-Z0-9]{5,18}$" title="Must contain at least 5 alphanumeric characters" required>
+          </label>
+          <label for="email">
+            <i class="fa-solid fa-user"></i>
+            <input type="email" id="email" name="email" placeholder="Email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" title="Valid email directions only" required>
+          </label>
+          <label for="password">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Password" pattern="^[^.\s]{6,}" title="Must contain at least 6 characters" required>
+          </label>
+          <button>Register</button>
+        </form>
+      </section>
+
+      <section class="content reset-content">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <div class="title">
+          <h2>Reset Password</h2>
+        </div>
+
+        <form action="" class="form">
+          <label for="email">
+            <i class="fa-solid fa-user"></i>
+            <input type="email" id="email" name="email" placeholder="Email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" title="Registered email only" required>
+          </label>
+          <button>Send me the link to reset password</button>
+        </form>
+      </section>
+
+    </div>
+  </div>
+
+</body>
+</html>
